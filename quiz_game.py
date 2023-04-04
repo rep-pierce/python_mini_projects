@@ -39,4 +39,5 @@ if answer.lower() == "power supply unit":
 else:
     print("Incorrect!")
 
-print(f'You got {score/4}%!')
+
+print(f'You got {(score/4)*100}%!')

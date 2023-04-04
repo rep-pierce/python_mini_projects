@@ -17,16 +17,21 @@ print
 
 while True:
     str_answer = input(f"Guess number from 0 to {top_of_range}! ")
-    answer = int(str_answer)
+    
+    if str_answer.isdigit():
+        answer = int(str_answer)
+    else:
+        print("Must be a number")
+        continue
+
     if answer == random_number:
         guess_times += 1
         break
+    elif answer > random_number: 
+        print("Answer is lower")
+        guess_times += 1
     else:
-        if answer > random_number:
-            print("Answer is lower")
-            guess_times += 1
-        else:
-            print("Answer is higher")
-            guess_times += 1
+        print("Answer is higher")
+        guess_times += 1
 
 print(f"It took you {guess_times} guesses to get the right answer")

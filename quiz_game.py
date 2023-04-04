@@ -23,5 +23,20 @@ if answer.lower() == "graphics processing unit":
 else:
     print("Incorrect!")
 
-answer = input("")
-print(score)
+answer = input("What does RAM stand for? ")
+
+if answer.lower() == "random access memory":
+    print("Correct!")
+    score += 1
+else:
+    print("Incorrect!")
+
+answer = input("What does PSU stand for? ")
+
+if answer.lower() == "power supply unit":
+    print("Correct!")
+    score += 1
+else:
+    print("Incorrect!")
+
+print(f'You got {score/4}%!')

@@ -9,6 +9,7 @@ while True:
     user_input = input("Type Rock/Paper/Scissors or q to quit: ")
     computer_throw = computer_states[random.randint(1, 3)]
     if user_input == "q":
+        print(f"Total Scores: User Wins = {user_wins} | Computer Wins = {computer_wins}")
         quit()
 
     if user_input.lower() not in ["rock", "paper", "scissors"]:

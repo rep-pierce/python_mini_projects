@@ -43,27 +43,41 @@ if answer.lower() == "left":
         counter = 0
         while counter <= 10:
             answer = input("Do you want to keep FOLLOWing the path or TURN around? ")
-            if answer.lower == "turn":
+            if answer.lower() == "turn":
                 print("You turn around and keep walking, but there seems to be no end")
                 counter += 1
                 continue
-            elif answer.lower == "follow":
+            elif answer.lower() == "follow":
                 print("You keep following the path")
                 counter += 1
                 continue
             else:
                 print("Not a valid answer, enter TURN or FOLLOW.")
                 continue
-        print(f'Ryan: "I am really starting to freak out {name} theres no end to this Road!!!')
+        print(f'Ryan: "I am really starting to freak out {name}, theres no end to this Road!!!')
         print("You and Ryan keep wandering the road for eternity looking for a way out")
+    else:
+        print("Not a valid option, you lose.")
+        quit()
 elif answer.lower() == "right":
     print('You come across a field of flowers and a river.')
-    answer = input("Do you walk into the field of FLOWERS, or try to cross the RIVER?")
+    answer = input("Do you walk into the field of FLOWERS, or try to cross the RIVER? ")
     if answer.lower() == 'flowers':
         print('Ryan: "These flowers are so beautiful!"')
         print("As you walk into the field, you and Ryan get stuck")
         print('Ryan: "Oh no is this quicksand?!"')
-        print("You and Ryan have suffocated in quicksand")
+        print("You and Ryan have suffocated in quicksand.")
+        quit()
+    elif answer.lower() == "river":
+        print("You and Ryan wade out into the water.")
+        print('Ryan: "Dang this water is really cold! And it just keeps getting deeper!"')
+        print("Right as Ryan finishes what he's saying, he gets dragged under!")
+        print("You panic and try to run back, but you get pulled under too.")
+        print("You and Ryan got eaten by sharks.")
+        quit()
+    else:
+        print("Not a valid option, you lose.")
+        quit()
 else:
     print("Not a valid option, you lose.")
     quit()
